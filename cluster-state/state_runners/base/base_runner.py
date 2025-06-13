@@ -67,6 +67,7 @@ class BASE_RUNNER:
                         # fetched = await asyncio.to_thread(self.fetch_state, _)
                         fetched = self.fetch_state(_)
                         self.structure_data(DATA, fetched.to_dict())
+                        
 
                         self.RICH_CONSOLE.log(
                             f"[spring_green1]Fetched[/ spring_green1]  [slate_blue1]{_[:_.find(".")]}[/ slate_blue1] | [light_salmon1]{self.NAME}[/ light_salmon1] in {time.time() - start_time}"
